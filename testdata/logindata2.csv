@@ -1,0 +1,8 @@
+
+
+testName,email,password,expected
+invalid1,qedge@gmail.com,qedge,failure
+valid1,qedge1234@gmail.com,qedge1234@gmail.com,success
+invalid2,qedge456@yahoo.com,demo@456,failure
+invalid3,q123@gmail.com,test@12345,failure
+valid2,qedge4567@gmail.com,qedge4567@gmail.com,success
