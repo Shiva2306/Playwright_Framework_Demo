@@ -5,8 +5,8 @@
 export class TestConfig{
  
     //appUrl="http://localhost/opencart/upload/"
-   static appUrl="https://naveenautomationlabs.com/opencart"
-  // static appUrl="https://tutorialsninja.com/demo/"
+   //static appUrl="https://naveenautomationlabs.com/opencart"
+   static appUrl="https://tutorialsninja.com/demo/"
     
   
     //invalid login credentials

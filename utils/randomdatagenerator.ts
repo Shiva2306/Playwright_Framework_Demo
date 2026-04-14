@@ -7,10 +7,7 @@ export class RandomDataUtil{
 static getFirstName()
 {
     return faker.person.firstName();
-    
-
-   
-
+  
 }
 
 static getlastName()

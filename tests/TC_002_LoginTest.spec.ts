@@ -19,8 +19,6 @@ test('TC_002_LoginTest @sanity', async ({page})=>{
 
     await page.goto(TestConfig.appUrl);
     
-
-
    let hp = new HomePage(page);
    await hp.clickOnMyAccount();
    await hp.clickOnLogin();
@@ -30,7 +28,7 @@ test('TC_002_LoginTest @sanity', async ({page})=>{
      await lp.enterPassword(TestConfig.password);
 
     
-    
+
    
     await lp.clickLogin();
 
