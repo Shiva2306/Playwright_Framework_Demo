@@ -1,5 +1,6 @@
 
 
+import '../utils/hooks';
 
 import { test, expect } from '@playwright/test';
 import { LoginPage } from '../pages/LoginPage';
@@ -21,7 +22,7 @@ for (const data of testData) {
 
     test(`Login Test with CSV Data: ${data.testName} @datadriven`, async ({ page }) => {
 
-        await page.goto(TestConfig.appUrl);
+       // await page.goto(TestConfig.appUrl);
 
         const homePage = new HomePage(page);
         await homePage.clickOnMyAccount();

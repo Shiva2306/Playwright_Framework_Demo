@@ -8,7 +8,7 @@
 //2) Loginpage
 
 
-
+import '../utils/hooks';
 import { expect, test } from '@playwright/test';
 import { HomePage } from '../pages/HomePage';
 import { LoginPage } from '../pages/LoginPage';
@@ -17,7 +17,7 @@ import { MyAccountPage } from '../pages/MyAccountPage';
 
 test('TC_002_LoginTest @sanity', async ({page})=>{
 
-    await page.goto(TestConfig.appUrl);
+   // await page.goto(TestConfig.appUrl);
     
    let hp = new HomePage(page);
    await hp.clickOnMyAccount();

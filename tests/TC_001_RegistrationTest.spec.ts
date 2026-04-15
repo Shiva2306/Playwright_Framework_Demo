@@ -41,7 +41,7 @@ const successMsg = await registrationPage.getSuccessMessage();
 
  */
 
-
+import '../utils/hooks';
 import {expect, test} from '@playwright/test';  
 import {HomePage} from '../pages/HomePage'; 
 import { RegistrationPage } from '../pages/RegistrationPage';
@@ -50,7 +50,7 @@ import { TestConfig } from '../testconfig';
 
 test('TC_001_RegistrationTest @sanity', async ({page})=>{   
 
-    await page.goto(TestConfig.appUrl);
+    //await page.goto(TestConfig.appUrl);
 
     let homePage = new HomePage(page);    
     await homePage.clickOnMyAccount();

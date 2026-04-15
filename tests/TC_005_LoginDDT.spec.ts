@@ -8,6 +8,7 @@
 //2) Loginpage(2 valid data & 3 invalid data)
 //3) Logoutpage
 
+import '../utils/hooks';
 
 import { test, expect } from '@playwright/test';
 import { LoginPage } from '../pages/LoginPage';
@@ -31,7 +32,7 @@ for(const data of jsonTestData)
         //const config = new TestConfig(); // create instance
         //await page.goto(config.appUrl);    // getting appURL from test.config.ts file
        
-        await page.goto(TestConfig.appUrl);
+       // await page.goto(TestConfig.appUrl);
 
         const homePage = new HomePage(page);
         await homePage.clickOnMyAccount();

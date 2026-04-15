@@ -13,12 +13,11 @@ export default defineConfig({
   reporter: [
     ['html'],
     ['allure-playwright'],
-    ['dot'],
     ['list']
   ],
 
   use: {
-    //trace: 'on-first-retry',
+    trace: 'retain-on-failure',
     screenshot: 'only-on-failure',
     video: 'retain-on-failure',
     //baseURL: 'https://restful-booker.herokuapp.com'  
@@ -35,7 +34,7 @@ export default defineConfig({
       name: 'chromium',
       use: { ...devices['Desktop Chrome'] },
     },
-    /* {
+     {
       name: 'firefox',
       use: { ...devices['Desktop Firefox'] },
     },
@@ -43,7 +42,7 @@ export default defineConfig({
     {
       name: 'webkit',
       use: { ...devices['Desktop Safari'] },
-    }  */
+    }  
   ],
 
 
