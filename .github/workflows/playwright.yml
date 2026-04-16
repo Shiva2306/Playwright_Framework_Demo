@@ -1,15 +1,16 @@
 name: Playwright Tests
+
 on:
   push:
     branches: [master]
   pull_request:
     branches: [master]
+
 jobs:
   test:
     timeout-minutes: 60
-    runs-on: windows-latest
+    runs-on: ubuntu-latest   # better compatibility for Allure
 
-    
     steps:
     - name: Checkout Repository
       uses: actions/checkout@v4
@@ -18,7 +19,7 @@ jobs:
       uses: actions/setup-node@v4
       with:
         node-version: lts/*
-    
+
     - name: Install dependencies
       run: npm ci
 
@@ -26,10 +27,28 @@ jobs:
       run: npx playwright install --with-deps
 
     - name: Run Playwright tests
-      #run: npx playwright test
-      #run: npx playwright test --grep "@sanity"
       run: npm run test:sanity
-    
+
+    # ✅ Install Allure CLI
+    - name: Install Allure CLI
+      if: always()
+      run: npm install -g allure-commandline --save-dev
+
+    # ✅ Generate Allure Report
+    - name: Generate Allure Report
+      if: always()
+      run: allure generate allure-results --clean -o allure-report
+
+    # ✅ Upload Allure Report
+    - name: Upload Allure Report
+      if: always()
+      uses: actions/upload-artifact@v4
+      with:
+        name: allure-report
+        path: allure-report/
+        retention-days: 30
+
+    # ✅ (Existing) Upload Playwright HTML Report
     - name: Upload Playwright HTML Report
       if: always()
       uses: actions/upload-artifact@v4
