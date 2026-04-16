@@ -79,5 +79,5 @@ test('TC_001_RegistrationTest @sanity', async ({page})=>{
         await registrationPage.clickOnContinue();
 
 const successMsg = await registrationPage.getSuccessMessage();
-     expect(successMsg).toContain('my Account Has Been Created!');
+     expect(successMsg).toContain('Your Account Has Been Created!');
 });

@@ -15,7 +15,7 @@ import { LoginPage } from '../pages/LoginPage';
 import { TestConfig } from '../testconfig';
 import { MyAccountPage } from '../pages/MyAccountPage';
 
-test('TC_002_LoginTest @sanity', async ({page})=>{
+test('TC_002_LoginTest @regression', async ({page})=>{
 
    // await page.goto(TestConfig.appUrl);
     
