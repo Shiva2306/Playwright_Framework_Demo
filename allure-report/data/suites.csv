@@ -1,0 +1,2 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","12940","TC_001_RegistrationTest @sanity","chromium","2026-04-18","passed","2026-04-18","","TC_001_RegistrationTest.spec.ts","",""
